@@ -1,0 +1,409 @@
+<html>
+  <head>
+    <title> My Drive - Google Drive</title>
+    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Google_Drive_icon_%282020%29.svg/1147px-Google_Drive_icon_%282020%29.svg.png"></link>
+    <style>
+    </style>
+  </head>
+  <iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20230502/r20190131/zrt_lookup.html" style="display: none;"></iframe>
+  <body>
+    <style>
+      header {
+        align-items: center;
+        background-color: rgb(0, 119, 255);
+        border-bottom-width: 0px;
+        border-left-width: 0px;
+        border-right-width: 0px;
+        border-top-width: 0px;
+        box-sizing: border-box;
+        display: flex;
+        height: 65px;
+        justify-content: space-between;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
+      }
+      .container {
+        background-color: transparent;
+        color: transparent;
+        display: flex;
+        font-size: 1.2em;
+        line-height: 1rem;
+        margin-bottom: 0%;
+        margin-left: 0%;
+        margin-right: 0%;
+        margin-top: 0%;
+        max-width: 0px;
+        min-width: 0px;
+        padding-bottom: 0%;
+        padding-left: 0%;
+        padding-right: 0%;
+        padding-top: 0%;
+        position: relative;
+        width: 1000px;
+      }
+      a {
+        color: aliceblue;
+        display: inline-block;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top; 20px;
+        text-decoration-line: none;
+      }
+      div a {
+        margin-left: 20px;
+      }
+      .logo {
+        cursor: pointer;
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+        padding-bottom: 0%;
+        padding-left: 0%;
+        padding-right: 0%;
+        padding-top: 0%;
+      }
+      input {
+        border-bottom-color: rgb(0, 119, 255);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-bottom-width: 3px;
+        border-left-color: rgb(0, 119, 255);
+        border-left-width: 3px;
+        border-right-color: rgb(0, 119, 255);
+        border-right-width: 3px;
+        border-top-color: rgb(0, 119, 255);
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-top-width: 3px;
+        height: 20px;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        width: 300px;
+      }
+      #searchbar {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        display: grid;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: auto;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 5px;
+        width: 220px;
+      }
+      input[type="text"] {
+        transition-delay: 0s;
+        transition-duration: 0.15s;
+        transition-property: width;
+        transition-timing-function: ease-in-out;
+      }
+      .listItem {
+        background-color: white;
+        border-bottom-color: rbg(0, 119, 255);
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-bottom-style: solid;
+        border-bottom-width: 3px;
+        border-left-color: rbg(0, 119, 255);
+        border-left-style: solid;
+        border-left-width: 3px;
+        border-right-color: rbg(0, 119, 255);
+        border-right-style: solid;
+        border-right-width: 3px;
+        border-top-color: rgb(0, 119, 255);
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-top-style: solid;
+        border-top-width: 3px;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        font-family: Fredoka;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 8px;
+        padding-left: 0px;
+        padding-right: 8px;
+        padding-top: 8px;
+        text-decoration-line: none;
+        width: 150px;
+      }
+      #list {
+        background-color: transparent;
+        border-bottom-width; 0px
+        border-left-width; 0px
+        border-right-width; 0px
+        border-top-width; 0px
+        display: none;
+        justify-content: right;
+        left: 11.85em;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        max-height: 400px;
+        overflow-y: scroll;
+        padding-bottom; 0px
+        padding-left; 0px
+        padding-right; 0px
+        padding-top; 0px
+        position: absolute;
+        top: 40px;
+        width: 420px;
+        z-index: 1000;
+      }
+      div {
+        text-align: center;
+      }
+      ul {
+        display: inline;
+        margin-bottom; 0px
+        margin-left; 0px
+        margin-right; 0px
+        margin-top; 0px
+        padding-bottom; 0px
+        padding-left; 0px
+        padding-right; 0px
+        padding-top; 0px
+      }
+      .nav_links {
+        display: flex;
+        list-style-type: none;
+        padding-right: 10px;
+      }
+      li {
+        display: inline;
+        list-style-type:none;
+        margin-bottom: 0px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 0px;
+      }
+      .nav_links li {
+        margin-bottom: 0%;
+        margin-left: 0%;
+        margin-right: 0%;
+        margin-top: 0%;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 5px;
+        transition-delay: 0s;
+        transition-duration: 0.2s;
+        transition-property: all;
+        transition-timing-function: ease-in-out;
+      }
+      .nav-links li a {
+        font-family: Fredoka;
+        transition-delay: 0s;
+        transition-duration: 0.3s;
+        transition-property: color;
+        transition-timing-function: ease;
+      }
+      iframe, dl, embed {
+        margin-top: 50px;
+      }
+      iframe {
+        background-color
+      }
+      .homeimg {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
+        width: 100vw;
+      }
+      .homeimgimg {
+        position: relative;
+        top: 100px;
+        width: 40%;
+      }
+      h1, h2 {
+        color: White;
+        font-size: 4em;
+        text-align: center;
+      }
+      h2 {
+        font-size: 2em;
+      }
+      .homeimg h2 {
+        position: relative;
+        top: 100px;
+      }
+      body {
+        background-color: rgb(3, 1, 41);
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+      }
+      h2 a img {
+        width: 30px;
+      }
+      52 a img {
+        left: 5px;
+        max-width: 30px;
+        position: relative;
+        width: 30px;
+      }
+      h2 a {
+        color: blue;
+        cursor: pointer;
+        font-family: Fredoka;
+        text-decoration-line: underline;
+      }
+      .featured {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+      }
+      .featured {
+        justify-content: center;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+      }
+      .homescreendiv {
+        height: 90px;
+        max-width: none;
+        padding-inline-end: 10px;
+        padding-inline-start: 10px;
+        width: 30vw;
+      }
+      button h4 {
+        background-color: rgb(0, 119, 255);
+        border-bottom-style: none;
+        border-left-style: none;
+        border-right-style: none;
+        border-top-style: none;
+        color: aliceblue;
+        cursor: pointer;
+        font-size: 1.2em;
+      }
+      button {
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        margin-bottom: 130px;
+        margin-left: 1px;
+        margin-right: 1px;
+        margin-top: 1px;
+        max-width: 200px;
+        width: 240px;
+      }
+      .homescreendiv button {
+        background-color: rgba (3, 1, 41, 0.5);
+        background-image: url(https://irunblocked.com/Pictures/bg-svg.png);
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        height: 90px;
+        max-width: none;
+        padding bottom: 0px;
+        padding left: 0px;
+        padding right: 0px;
+        padding top: 0px;
+        transition-delay: 0s;
+        transition-duration: 0.2s;
+        transition-property: all;
+        transition-timing-function: ease-in-out;
+        width: 30vw;
+      }
+      .gameicon {
+        height: 250px;
+        width: 250px;
+      }
+      .homescreendiv button img {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        float: left;
+        height: 90px;
+        min-width: 0px;
+        width: 90px;
+      }
+      p {
+        color: white;
+        font-family: Fredoka;
+        font-weight: 10;
+        text-align: center;
+      }
+      .homescreendiv button p {
+        font-family: Fredoka;
+        font-weight: 10;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 32px;
+      }
+      .homescreendiv button:hover {
+        background-color: rgba (255, 255, 255, 0.1);
+        transform: scale(1.03);
+      }
+    </style>
+    <header>
+    <div class="container">
+      <a class="logo" href="/">
+        <img width="200px" src="https://github.com/Code-FFORTTV/Bing-Chilling/blob/main/Images/Bing_Chilling-removebg-preview.png" alt="logo"></img>
+      </a>
+      <input id="searchbar" autocomplete="off" onkeyup="search()" type="text" \n name="search" placeholder="Search..."></input>
+      <div id="list">
+        <a class="listItem" href="/"
+          "Home"></a>
+      </div>
+      </div>
+      <nav>
+        <ul class="nav_links">
+          <li>
+            <a href>
+              Home
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="homeimg">
+      <img class="homeimgimg" src="https://raw.githubusercontent.com/Code-FFORTTV/Bing-Chilling/main/Images/Bing_Chilling__1_-removebg-preview.png?token=GHSAT0AAAAAACBYROA5RMZD2UR3HPNRWI4QZCTTCTA"></img>
+      <h2 id="subtitle"> Rubrub</h2>
+      <h2>Join our<a href="https://discord.gg/34276s" target="_blank">Discord<img src="https://irunblocked.com/Pictures/discord.png"></img></a>to interact with the community :)</h2>
+    </div>
+    <h1>Featured Games</h1>
+    <div class="feauturecontainer">
+      <div class="homescreendiv">
+        <button onclick="openGunMayhem2()">
+          <img loading="lazy" class="gameicon" src="https://irunblocked.com/Game-icons/gunmayhem2.jpg"></img>
+          <p> Gun Mayhem 2</p>
+        </button>
+      </div>
+    </div>
+    
+  </body>
+  
+  
+</html>
